@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gran turismo (2023)</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: sans-serif;
+            background-color: black;
+        }
+
+        header {
+            background-color: #000000;
+            color: #fff;
+            padding: 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .menu {
+            display: flex;
+            list-style: none;
+        }
+
+        .menu li {
+            margin-left: 20px;
+        }
+
+        .menu li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .menu li a:hover {
+            color: orange;
+            text-shadow: 0px 0px 5px rgba(255, 165, 0, 1);
+        }
+
+        .search {
+            margin-left: auto;
+        }
+
+        .search input[type="text"] {
+            padding: 10px;
+            border-radius: 20px;
+            border: none;
+        }
+
+        .search button {
+            background-color: #f1c40f;
+            color: black;
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .search button:hover {
+            background-color: #e6b90f;
+        }
+
+        .movie-container {
+            background-color: #000000;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .video-player {
+            margin-top: 20px;
+        }
+
+        video {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="hamburger-menu">
+                <div class="hamburger"></div>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+            </ul>
+            <div class="search">
+                <form>
+                    <input type="text" placeholder="Search...">
+                    <button type="submit">Search</button>
+                </form>
+            </div>  
+        </nav>
+    </header>
+
+    <div class="movie-container">
+        <h1>gran turismo (2023)</h1>
+        <div class="video-player">
+            <video src="https://souy17.s3.eu-north-1.amazonaws.com/Gran.Turismo.2023.720p.CAMRip.AR.SUB.mp4"controls></video>
+        </div>
+    </div>
+</body>
+</html>
