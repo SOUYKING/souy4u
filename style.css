@@ -1,0 +1,161 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: black;
+}
+
+header {
+  background-color: #000000;
+  color: #fff;
+  padding: 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 150px; /* Set the desired width for the logo */
+}
+
+.logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+}
+
+.menu li {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  margin-left: 5px; /* Add some spacing between menu items */
+}
+
+.menu li:nth-child(2),
+.menu li:nth-child(3) {
+  margin-left: 20px;
+}
+
+.search {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.search input[type="text"] {
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  margin-right: 5px; /* Add some spacing between the search bar and menu items */
+}
+
+.search button {
+  background-color: #f1c40f;
+  color: black;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-right: 5px; /* Add some spacing between the search bar and menu items */
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background-color: #000000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+  width: 200px;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff; /* Add the desired text color */
+}
+
+.card p {
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+.card a {
+  display: block;
+  background-color: #e6b90f;
+  color: black;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.card a:hover {
+  background-color: #d6a90f;
+}
+
+/* Footer styles */
+footer {
+  background-color: #000000;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+
