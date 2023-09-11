@@ -165,3 +165,64 @@ footer a:hover {
   max-width: 100%; /* Ensure the image doesn't exceed the container's width */
   height: auto; /* Maintain the aspect ratio */
 }
+
+/* Add this CSS for menu items */
+.menu li {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  margin-left: 5px; /* Add some spacing between menu items */
+}
+
+/* Adjust the logo styling */
+.logo {
+  width: 150px; /* Set the desired width for the logo */
+}
+
+.logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Add this CSS for the search bar */
+.search {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.search input[type="text"] {
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  margin-right: 5px; /* Add some spacing between the search bar and menu items */
+}
+
+/* Add this CSS to style the search button */
+.search button {
+  background-color: #f1c40f;
+  color: black;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-right: 5px; /* Add some spacing between the search bar and menu items */
+}
+
+/* Add this CSS to style the "Movies" and "Series" links */
+.menu li:nth-child(2),
+.menu li:nth-child(3) {
+  margin-left: 20px;
+}
+
+/* Optionally, you can adjust the spacing and alignment as needed */
