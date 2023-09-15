@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Fault (2023) </title>
+    <link rel="icon" href="Web_logo.png" type="image/png">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: sans-serif;
+            background-color: black;
+        }
+
+        header {
+            background-color: #000000;
+            color: #fff;
+            padding: 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .menu {
+            display: flex;
+            list-style: none;
+        }
+
+        .menu li {
+            margin-left: 20px;
+        }
+
+        .menu li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .menu li a:hover {
+            color: orange;
+            text-shadow: 0px 0px 5px rgba(255, 165, 0, 1);
+        }
+
+        .search {
+            margin-left: auto;
+        }
+
+        .search input[type="text"] {
+            padding: 10px;
+            border-radius: 20px;
+            border: none;
+        }
+
+        .search button {
+            background-color: #f1c40f;
+            color: black;
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .search button:hover {
+            background-color: #e6b90f;
+        }
+
+        .movie-container {
+            background-color: #000000;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .video-player {
+            margin-top: 20px;
+        }
+
+        video {
+            width: 100%;
+        }
+        /* Add this CSS for menu items */
+.menu li {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  margin-left: 5px; /* Add some spacing between menu items */
+}
+
+/* Adjust the logo styling */
+.logo {
+  width: 150px; /* Set the desired width for the logo */
+}
+
+.logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Add this CSS for the search bar */
+.search {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.search input[type="text"] {
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  margin-right: 5px; /* Add some spacing between the search bar and menu items */
+}
+
+/* Add this CSS to style the search button */
+.search button {
+  background-color: #f1c40f;
+  color: black;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-right: 5px; /* Add some spacing between the search bar and menu items */
+}
+
+/* Add this CSS to style the "Movies" and "Series" links */
+.menu li:nth-child(2),
+.menu li:nth-child(3) {
+  margin-left: 20px;
+}
+
+/* Optionally, you can adjust the spacing and alignment as needed */
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="hamburger-menu">
+                <div class="hamburger"></div>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html"><img src="Web_logo.png" alt="Your Logo Alt Text" width="150" height="150"></a></li>
+                <li><a href="movies.html">Movies</a></li>
+                <li><a href="series.html">Series</a></li>
+            </ul>
+            <div class="search">
+                <form>
+                    <input type="text" placeholder="Search...">
+                    <button type="submit">Search</button>
+                </form>
+            </div>  
+        </nav>
+    </header>
+
+    <div class="movie-container">
+        <h1>My Fault (2023)</h1>
+        <div class="video-player">
+            <video src="https://souy17.s3.eu-north-1.amazonaws.com/My.Fault.2023.mp4"controls></video>
+        </div>
+    </div>
+</body>
+</html>
