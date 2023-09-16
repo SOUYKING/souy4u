@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Punisher 2 (20219) - Series</title>
+    <link rel="icon" href="Web_logo.png" type="image/png">
+    <style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: black;
+}
+
+header {
+    background-color: #000000;
+    color: #fff;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+}
+
+.menu li {
+    margin-left: 20px;
+}
+
+.menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.menu li a:hover {
+    color: orange;
+    text-shadow: 0px 0px 5px rgba(255, 165, 0, 1);
+}
+
+.search {
+    margin-left: auto;
+}
+
+.search input[type="text"] {
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+}
+
+.search button {
+    background-color: #f1c40f;
+    color: black;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.search button:hover {
+    background-color: #e6b90f;
+}
+
+.movie-container {
+    background-color: #000000;
+    color: #fff;
+    padding: 20px;
+}
+
+.video-player {
+    margin-top: 20px;
+}
+
+video {
+    width: 100%;
+}
+
+.episode-list {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 10px 0;
+    gap: 20px; /* Adjust spacing between posters */
+}
+
+.episode-list h2 {
+    margin-right: 20px; /* Add space between the video player and episode posters */
+}
+
+.episode-list ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 0;
+}
+
+.episode-list li {
+    margin-right: 20px; /* Add space between posters */
+}
+
+.episode-list img {
+    width: 200px; /* Adjust the width and height for your posters */
+    height: 300px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid #fff; /* Add a border around the posters */
+    border-radius: 10px; /* Add rounded corners to the posters */
+    transition: transform 0.3s ease; /* Add a hover effect */
+}
+
+.episode-list img:last-child {
+    margin-right: 0; /* Remove margin-right from the last poster */
+}
+
+.episode-list img:hover {
+    transform: scale(1.1); /* Enlarge the poster on hover */
+}
+
+.episode-list {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 10px 0;
+    gap: 20px; /* Adjust spacing between posters */
+}
+
+.episode-list h2 {
+    margin-right: 20px; /* Add space between the video player and episode posters */
+    text-align: center; /* Center align the text */
+    cursor: pointer; /* Add a pointer cursor on hover */
+    position: relative; /* Create a relative position for the underline */
+}
+
+.episode-list h2::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px; /* Adjust the distance of the underline from the text */
+    background-color: #fff; /* Underline color */
+    height: 2px; /* Underline height */
+    transform: scaleX(0); /* Initially set the underline width to zero */
+    transform-origin: left center;
+    transition: transform 0.3s ease-in-out; /* Add a smooth transition for the underline */
+}
+
+.episode-list h2:hover::after {
+    transform: scaleX(1); /* Expand the underline to full width on hover */
+}
+
+.episode-list {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 10px 0;
+    gap: 20px; /* Adjust spacing between posters */
+}
+
+.episode-list h2 {
+    margin-right: 20px; /* Add space between the video player and episode posters */
+}
+
+.episode-list ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 0;
+}
+
+.episode-list li {
+    margin-right: 20px; /* Add space between posters */
+}
+
+.episode-list img {
+    width: 200px; /* Default width for posters */
+    height: 300px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid #fff; /* Add a border around the posters */
+    border-radius: 10px; /* Add rounded corners to the posters */
+    transition: transform 0.3s ease; /* Add a hover effect */
+}
+
+.episode-list img:last-child {
+    margin-right: 0; /* Remove margin-right from the last poster */
+}
+
+.episode-list img:hover {
+    transform: scale(1.1); /* Enlarge the poster on hover */
+}
+
+/* Media query for smaller screens (e.g., phones) */
+@media screen and (max-width: 768px) {
+    .episode-list img {
+        width: 120px; /* Reduce width for smaller screens */
+        height: 180px; /* Reduce height proportionally */
+    }
+}
+
+        /* Style for the episode card */
+        .episode-card {
+            background-color: #222;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .episode-card:hover {
+            background-color: orange;
+            color: #000;
+        }
+
+        .episode-card {
+            background-color: #222;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .episode-card:hover {
+            background-color: orange;
+            color: #000;
+        }
+
+        /* Style for the episode text */
+        .episode-text {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        /* Add this CSS for menu items */
+.menu li {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  margin-left: 5px; /* Add some spacing between menu items */
+}
+
+/* Adjust the logo styling */
+.logo {
+  width: 150px; /* Set the desired width for the logo */
+}
+
+.logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Add this CSS for the search bar */
+.search {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.search input[type="text"] {
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  margin-right: 5px; /* Add some spacing between the search bar and menu items */
+}
+
+/* Add this CSS to style the search button */
+.search button {
+  background-color: #f1c40f;
+  color: black;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-right: 5px; /* Add some spacing between the search bar and menu items */
+}
+
+/* Add this CSS to style the "Movies" and "Series" links */
+.menu li:nth-child(2),
+.menu li:nth-child(3) {
+  margin-left: 20px;
+}
+
+/* Optionally, you can adjust the spacing and alignment as needed */
+
+    </style>
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="hamburger-menu">
+                <div class="hamburger"></div>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html"><img src="Web_logo.png" alt="Your Logo Alt Text" width="150" height="150"></a></li>
+                <li><a href="movies.html">Movies</a></li>
+                <li><a href="series.html">Series</a></li>
+            </ul>
+            <div class="search">
+                <form>
+                    <input type="text" placeholder="Search...">
+                    <button type="submit">Search</button>
+                </form>
+            </div>  
+        </nav>
+    </header>
+
+    <div class="movie-container">
+        <div class="video-player">
+            <video id="series-video" controls></video>
+        </div>
+        <div class="episode-list">
+            <h2>Episodes</h2>
+            <ul id="episode-list"></ul>
+        </div>
+    </div>
+
+     <script>
+        const episodes = [
+            { name: 'Episode 1', videoUrl: 'https://the-punisher-2.s3.eu-north-1.amazonaws.com/CimaClub.Cam-Marvels.The.Punisher.S02E01.%5B720p%5D.mkv' },
+            { name: 'Episode 2', videoUrl: 'https://the-punisher-2.s3.eu-north-1.amazonaws.com/CimaClub.Cam-Marvels.The.Punisher.S02E02.%5B720p%5D.mkv-720.67687.mp4' },
+            { name: 'Episode 3', videoUrl: 'https://the-punisher-2.s3.eu-north-1.amazonaws.com/CimaClub.Cam-Marvels.The.Punisher.S02E03.%5B720p%5D.mkv-720.67688.mp4' },
+            { name: 'Episode 4', videoUrl: 'https://the-punisher-2.s3.eu-north-1.amazonaws.com/CimaClub.Cam-Marvels.The.Punisher.S02E04.%5B720p%5D.mkv-720.67689.mp4' },
+            { name: 'Episode 5', videoUrl: 'https://the-punisher-2.s3.eu-north-1.amazonaws.com/CimaClub.Cam-Marvels.The.Punisher.S02E05.%5B720p%5D.mkv-720.67692.mp4' },
+            { name: 'Episode 6', videoUrl: 'https://the-punisher-2.s3.eu-north-1.amazonaws.com/CimaClub.Cam-Marvels.The.Punisher.S02E06.%5B720p%5D+(1).mkv' },
+            { name: 'Episode 7', videoUrl: 'https://the-punisher-2.s3.eu-north-1.amazonaws.com/CimaClub.Cam-Marvels.The.Punisher.S02E07.%5B720p%5D.mkv' },
+            { name: 'Episode 8', videoUrl: 'https://the-punisher-2.s3.eu-north-1.amazonaws.com/CimaClub.Cam-Marvels.The.Punisher.S02E08.%5B720p%5D.mkv-720.67694.mp4' },
+            { name: 'Episode 9', videoUrl: 'https://the-punisher-2.s3.eu-north-1.amazonaws.com/CimaClub.Cam-Marvels.The.Punisher.S02E09.%5B720p%5D.mkv' },
+            { name: 'Episode 10', videoUrl: 'https://the-punisher-2.s3.eu-north-1.amazonaws.com/CimaClub.Cam-Marvels.The.Punisher.S02E10.%5B720p%5D.mkv-720.67699.mp4' },
+            { name: 'Episode 11', videoUrl: 'https://the-punisher-2.s3.eu-north-1.amazonaws.com/CimaClub.Cam-Marvels.The.Punisher.S02E11.%5B720p%5D.mkv-720.67700.mp4' },
+            { name: 'Episode 12', videoUrl: 'https://the-punisher-2.s3.eu-north-1.amazonaws.com/CimaClub.Cam-Marvels.The.Punisher.S02E12.%5B720p%5D.mkv-720.67702.mp4' },
+            { name: 'Episode 13', videoUrl: 'https://the-punisher-2.s3.eu-north-1.amazonaws.com/CimaClub.Cam-Marvels.The.Punisher.S02E13.%5B720p%5D.mkv-720.67703.mp4' },
+        ];
+
+        const videoPlayer = document.getElementById('series-video');
+        const episodeList = document.getElementById('episode-list');
+
+        // Load the first episode by default
+        videoPlayer.src = episodes[0].videoUrl;
+
+        // Create episode list items and add click event listeners
+        episodes.forEach((episode, index) => {
+            const episodeCard = document.createElement('div');
+            episodeCard.classList.add('episode-card');
+
+            const episodeText = document.createElement('div');
+            episodeText.classList.add('episode-text');
+            episodeText.textContent = episode.name;
+
+            episodeCard.appendChild(episodeText);
+
+            episodeCard.addEventListener('click', () => {
+                videoPlayer.src = episode.videoUrl;
+                videoPlayer.play();
+            });
+
+            episodeList.appendChild(episodeCard);
+        });
+    </script>
+</body>
+</html>
