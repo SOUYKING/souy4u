@@ -117,23 +117,27 @@ document.write('<scr' + 'ipt type="text/javascript" src="//www.highcpmcreativefo
             'access12345',
         ];
 
-        function authenticate() {
+          function authenticate() {
             const enteredKey = document.getElementById('keyInput').value;
-
-            if (availableKeys.includes(enteredKey)) {
-                // Remove the used key from the available keys
-                availableKeys = availableKeys.filter(key => key !== enteredKey);
-
-                // Valid key, set a flag in local storage to indicate authentication
-                localStorage.setItem('authenticated', 'true');
-
-                // Redirect to index.html
-                window.location.href = 'index.html';
+            
+            if (validKeys.includes(enteredKey)) {
+                // Check if the key has been used before
+                if (!localStorage.getItem(enteredKey)) {
+                    // Mark the key as used
+                    localStorage.setItem(enteredKey, 'used');
+                    
+                    // Valid key, set a flag in local storage to indicate authentication
+                    localStorage.setItem('authenticated', 'true');
+                    
+                    // Redirect to index.html
+                    window.location.href = 'index.html';
+                } else {
+                    alert('This key has already been used.');
+                }
             } else {
                 alert('Invalid key. Please try again.');
             }
         }
     </script>
-    
 </body>
 </html>
