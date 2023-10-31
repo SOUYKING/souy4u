@@ -93,13 +93,15 @@ document.write('<scr' + 'ipt type="text/javascript" src="//www.highcpmcreativefo
     </div>
     
     <script>
-        const validKeys = ['mySecretKey', 'anotherKey123', 'specialAccess'];
+        const validKeys = ['mySecretKey2', 'anotherKey123', 'specialAccess'];
     
         function authenticate() {
             const enteredKey = document.getElementById('keyInput').value;
+    
             if (validKeys.includes(enteredKey)) {
                 // Valid key, set a flag in local storage to indicate authentication
                 localStorage.setItem('authenticated', 'true');
+    
                 // Redirect to index.html
                 window.location.href = 'index.html';
             } else {
@@ -107,5 +109,6 @@ document.write('<scr' + 'ipt type="text/javascript" src="//www.highcpmcreativefo
             }
         }
     </script>
+    
 </body>
 </html>
