@@ -76,6 +76,25 @@ document.write('<scr' + 'ipt type="text/javascript" src="//www.highcpmcreativefo
         document.getElementById("visitorCount").innerHTML = "Number of visitors: " + localStorage.getItem("visitorCount");
       }
     </script>
+
+<script>
+  // Check if the user is authenticated
+  if (localStorage.getItem('authenticated') === 'true') {
+      // If authenticated, redirect to the movies page
+      window.location.href = 'movies.html';
+  } else {
+      // If not authenticated, redirect to the authentication page
+      window.location.href = 'authenticate.html';
+  }
+</script>
+
+<script>
+  // Check if the user is authenticated
+  if (localStorage.getItem('authenticated') !== 'true') {
+      // If not authenticated, redirect to the authentication page
+      window.location.href = 'authenticate.html';
+  }
+</script>
     
       </header>
 
