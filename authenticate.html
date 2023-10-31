@@ -92,16 +92,41 @@ document.write('<scr' + 'ipt type="text/javascript" src="//www.highcpmcreativefo
         <!-- Place your movie links here -->
     </div>
     
-    <script>
-        const validKeys = ['mySecretKey2', 'anotherKey123', 'specialAccess'];
-    
+ <script>
+        // Array to store available keys
+        let availableKeys = [
+            'mySecretKey222',
+            'anotherKey1234',
+            'specialAccess',
+            'randomKey456',
+            'uniquePass789',
+            'secureCode2022',
+            'secretKey12345',
+            'accessGranted67',
+            'hiddenKey891',
+            'movieLover2023',
+            'sneakPeek123',
+            'authKey2024',
+            'keyToMovies20',
+            'userPass54321',
+            'exclusive123',
+            'unlockMovies2025',
+            'restrictedKey1',
+            'confidentialPass123',
+            'movieBuff456',
+            'access12345',
+        ];
+
         function authenticate() {
             const enteredKey = document.getElementById('keyInput').value;
-    
-            if (validKeys.includes(enteredKey)) {
+
+            if (availableKeys.includes(enteredKey)) {
+                // Remove the used key from the available keys
+                availableKeys = availableKeys.filter(key => key !== enteredKey);
+
                 // Valid key, set a flag in local storage to indicate authentication
                 localStorage.setItem('authenticated', 'true');
-    
+
                 // Redirect to index.html
                 window.location.href = 'index.html';
             } else {
