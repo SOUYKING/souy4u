@@ -50,6 +50,8 @@ document.write('<scr' + 'ipt type="text/javascript" src="//www.highcpmcreativefo
                       <button type="submit">Search</button>
                   </form>
               </div>  
+              <button id="logout-button">Log Out</button>
+
           </nav>
 
           <!-- Place this code in the head section of your HTML document -->
@@ -77,6 +79,35 @@ document.write('<scr' + 'ipt type="text/javascript" src="//www.highcpmcreativefo
       }
     </script>
 
+
+<script>
+  if (!localStorage.getItem('loggedIn')) {
+      // If the user is not logged in, redirect them to the login page.
+      window.location.href = 'login.html';
+  }
+</script>
+
+<script>
+  // Check if the user is logged in (you should have set this in your login process).
+  const isLoggedIn = localStorage.getItem('loggedIn');
+
+  if (isLoggedIn) {
+      // User is logged in, so show the logout button.
+      const logoutButton = document.getElementById('logout-button');
+      
+      logoutButton.addEventListener('click', function () {
+          // Clear the login status from localStorage.
+          localStorage.removeItem('loggedIn');
+          
+          // Redirect to the login page.
+          window.location.href = 'login.html';
+      });
+  } else {
+      // User is not logged in, so hide the logout button.
+      const logoutButton = document.getElementById('logout-button');
+      logoutButton.style.display = 'none';
+  }
+</script>
 
     
       </header>
