@@ -52,7 +52,7 @@ nav {
 }
 
 .menu li:nth-child(2),
-.menu li:nth-child(3) {
+.menu li nth-child(3) {
   margin-left: 20px;
 }
 
@@ -78,6 +78,20 @@ nav {
   cursor: pointer;
   transition: all 0.3s ease;
   margin-right: 5px; /* Add some spacing between the search bar and menu items */
+}
+
+#logout-button {
+  background-color: #f1c40f;
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#logout-button:hover {
+  background-color: #c0392b;
 }
 
 main {
@@ -157,5 +171,3 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
-
-
