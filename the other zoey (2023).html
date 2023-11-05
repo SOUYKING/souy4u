@@ -1,12 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Movie Website</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="icon" href="Web_logo.png" type="image/png">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>the other zoey (2023) </title>
+    <link rel="icon" href="Web_logo.png" type="image/png">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: sans-serif;
+            background-color: black;
+        }
+
+        header {
+            background-color: #000000;
+            color: #fff;
+            padding: 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .menu {
+            display: flex;
+            list-style: none;
+        }
+
+        .menu li {
+            margin-left: 20px;
+        }
+
+        .menu li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .menu li a:hover {
+            color: orange;
+            text-shadow: 0px 0px 5px rgba(255, 165, 0, 1);
+        }
+
+        .search {
+            margin-left: auto;
+        }
+
+        .search input[type="text"] {
+            padding: 10px;
+            border-radius: 20px;
+            border: none;
+        }
+
+        .search button {
+            background-color: #f1c40f;
+            color: black;
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .search button:hover {
+            background-color: #e6b90f;
+        }
+
+        .movie-container {
+            background-color: #000000;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .video-player {
+            margin-top: 20px;
+        }
+
+        video {
+            width: 100%;
+        }
+        /* Add this CSS for menu items */
+.menu li {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  margin-left: 5px; /* Add some spacing between menu items */
+}
+
+/* Adjust the logo styling */
+.logo {
+  width: 150px; /* Set the desired width for the logo */
+}
+
+.logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Add this CSS for the search bar */
+.search {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.search input[type="text"] {
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  margin-right: 5px; /* Add some spacing between the search bar and menu items */
+}
+
+/* Add this CSS to style the search button */
+.search button {
+  background-color: #f1c40f;
+  color: black;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-right: 5px; /* Add some spacing between the search bar and menu items */
+}
+
+/* Add this CSS to style the "Movies" and "Series" links */
+.menu li:nth-child(2),
+.menu li:nth-child(3) {
+  margin-left: 20px;
+}
+
+/* Optionally, you can adjust the spacing and alignment as needed */
+
+    </style>
+</head>
 <body>
     <header>
         <nav>
@@ -14,10 +165,9 @@
                 <div class="hamburger"></div>
             </div>
             <ul class="menu">
-              <li><a href="index.html"><img src="Web_logo.png" alt="Your Logo Alt Text" width="150" height="150"></a></li>
-              <li><a href="movies.html">Movies</a></li>
-              <li><a href="series.html">Series</a></li>
-
+                <li><a href="index.html"><img src="Web_logo.png" alt="Your Logo Alt Text" width="150" height="150"></a></li>
+                <li><a href="movies.html">Movies</a></li>
+                <li><a href="series.html">Series</a></li>
             </ul>
             <div class="search">
                 <form>
@@ -26,290 +176,13 @@
                 </form>
             </div>  
         </nav>
-
-        <!-- Place this code in the head section of your HTML document -->
-<script>
-    // Check if the visitor has visited the site before
-    if (localStorage.getItem("visitorCount")) {
-      // If they have, increment the visitor count
-      var visitorCount = parseInt(localStorage.getItem("visitorCount"));
-      visitorCount += 1;
-      localStorage.setItem("visitorCount", visitorCount);
-    } else {
-      // If they haven't, set the visitor count to 1
-      localStorage.setItem("visitorCount", 1);
-    }
-  </script>
-  
-  <!-- Place this code where you want to display the visitor count -->
-  <div id="visitorCount"></div>
-  
-  <script>
-    // Check if the current user is the owner of the site
-    if (document.cookie.indexOf("owner=true") > -1) {
-      // If they are, display the visitor count
-      document.getElementById("visitorCount").innerHTML = "Number of visitors: " + localStorage.getItem("visitorCount");
-    }
-  </script>
-  
     </header>
 
-    <main>
-        <div class="card">
-            <img src="01e30e0b2ddfcc36d3841f59e7d11bb5.jpg" alt="Movie 2">
-            <h3>The Flash (2023)</h3>
-            <a href="the_flash_2023.html">Watch and download</a>
+    <div class="movie-container">
+        <h1>the other zoey (2023)</h1>
+        <div class="video-player">
+            <video src="https://souy17.s3.eu-north-1.amazonaws.com/CimaClub.Cam-the.other.zoey.2023.720p-720.139809.mp4"controls></video>
         </div>
-        
-    
-    
-        <div class="card">
-            <img src="00e603272162f5af2b69c26f029b4109.jpg" alt="Movie 5">
-            <h3>Black Panther: Wakanda Forever (2022)</h3>
-            <a href="Black Panther.html">Watch and download</a>
-        </div>
-    
-        <div class="card">
-          <img src="32bad018fdef045e3262a4586be30343.jpg" alt="Movie 2">
-          <h3>Barbie (2023)</h3>
-          <a href="Barbie_2023.html">Watch and download</a>
-      </div>
-    
-      <div class="card">
-        <img src="1642c5dd9272cbaa0f7b2f9fc7135a9f.jpg" alt="Movie 2">
-        <h3>Extraction 1</h3>
-        <a href="Extraction.html">Watch and download</a>
     </div>
-
-    <div class="card">
-      <img src="extraction_two_xlg-203x300.jpg" alt="Movie 2">
-      <h3>Extraction 2</h3>
-      <a href="Extraction2.html">Watch and download</a>
-  </div>
-
-  <div class="card">
-    <img src="The-Other-Side-of-the-Door-2016.jpg" alt="Movie 2">
-    <h3>The.Other.Side.Of.The.Door.2016</h3>
-    <a href="The.Other.Side.Of.The.Door.2016.html">Watch and download</a>
-</div>
-
-<div class="card">
-  <img src="e93a315ba99620d1285596d49bf3f4c2.jpg" alt="Movie 2">
-  <h3>oppenheimer (2023)</h3>
-  <a href="oppenheimer.html">Watch and download</a>
-</div>
-
-<div class="card">
-  <img src="th.jpg" alt="Movie 2">
-  <h3>Meg 2: The Trench</h3>
-  <a href="the.meg2.html">Watch and download</a>
-</div>
-
-<div class="card">
-  <img src="film-aktorski-o-gran-turismo-zajmuje-4-miejsce-w-usa-podczas-weekendu-z-okazji-swieta-pracy.jpg" alt="Movie 2">
-  <h3>gran turismo (2023)</h3>
-  <a href="gran_turismo.html">Watch and download</a>
-</div>
-
-<div class="card">
-  <img src="8QIAFlELWwP8xfo2Xwf7oleDcUE.jpg" alt="Movie 2">
-  <h3>Friday Night Plan (2023)</h3>
-  <a href="Friday_Night_Plan_2023.html">Watch and download</a>
-</div>
-
-<div class="card">
-  <img src="breaking_point.png" alt="Movie 2">
-  <h3>Breaking Point (2023)</h3>
-  <a href="Breaking_Point_2023.html">Watch and download</a>
-</div>
-
-<div class="card">
-  <img src="The-Fast-and-The-Furious-Tokyo-Drift-2006-375x520.jpg" alt="Movie 2">
-  <h3>Tokyo.Drift (2006)</h3>
-  <a href="tokyo_drift.html">Watch and download</a>
-</div>
-
-<div class="card">
-  <img src="Red-Sparrow-2018-375x520.jpg" alt="Movie 2">
-  <h3>Red Sparrow (2018)</h3>
-  <a href="Red.Sparrow.2018.html">Watch and download</a>
-</div>
-
-<div class="card">
-  <img src="spider_man_across_the_spider_verse-257260163-mmed.jpg" alt="Movie 2">
-  <h3>spiderman across the spider verse (2023)</h3>
-  <a href="spider.man.across.the.spider.verse.html">Watch and download</a>
-</div>
-
-<div class="card">
-  <img src="red-notice-poster-400x592.jpg" alt="Movie 2">
-  <h3>red notice (2021)</h3>
-  <a href="red.notice.2021.html">Watch and download</a>
-</div>
-
-<div class="card">
-  <img src="MV5BYzZkOGUwMzMtMTgyNS00YjFlLTg5NzYtZTE3Y2E5YTA5NWIyXkEyXkFqcGdeQXVyMjkwOTAyMDU@-351x520.jpg" alt="Movie 2">
-  <h3>Black Adam (2022)</h3>
-  <a href="Black.Adam.2022.html">Watch and download</a>
-</div>
-
-<div class="card">
-  <img src="title_poster_1687892324.jpg" alt="Movie 2">
-  <h3>Fear the Night (2023)</h3>
-  <a href="Fear.the.Night.2023.html">Watch and download</a>
-</div>
-
-<div class="card">
-  <img src="cqFLQcDMfintFiDEyyw6XsUbbw4.jpg" alt="Movie 2">
-  <h3>The Nun (2018)</h3>
-  <a href="The.Nun.html">Watch and download</a>
-</div>
-
-<div class="card">
-  <img src="th2.jpeg" alt="Movie 2">
-  <h3>The Nun (2023)</h3>
-  <a href="the.nun2.html">Watch and download</a>
-</div>
-
-<div class="card">
-  <img src="1.jpeg" alt="Movie 2">
-  <h3>enola holmes 1 (2020)</h3>
-  <a href="enola.holmes.2020.html">Watch and download</a>
-</div>
-
-<div class="card">
-  <img src="Enola+Holmes+2.jpg" alt="Movie 2">
-  <h3>enola holmes 2 (2022)</h3>
-  <a href="enola.holmes.2022.html">Watch and download</a>
-</div>
-
-<div class="card">
-  <img src="d7YxLE6ohg7TnDLYr6DEvyAxnC8.jpg" alt="Movie 2">
-  <h3>John Wick 1 (2014)</h3>
-  <a href="John-Wick-2014.html">Watch and download</a>
-</div>
-
-<div class="card">
-  <img src="r687UV1zQ5KDB9AxRokRscWIRvt.jpg" alt="Movie 2">
-  <h3>John Wick 2 (2017)</h3>
-  <a href="john-wick2.html">Watch and download</a>
-</div>
-
-<div class="card">
-  <img src="John_Wick_Chapter_3_Parabellum.png" alt="Movie 2">
-  <h3>John Wick 3 (2019)</h3>
-  <a href="John-Wick-2014.html">Watch and download</a>
-</div>
-
-<div class="card">
-  <img src="John_Wick_-_Chapter_4_promotional_poster.jpg" alt="Movie 2">
-  <h3>John Wick 4 (2023)</h3>
-  <a href="john-wick2.html">Watch and download</a>
-</div>
-
-<div class="card">
-  <img src="culpa_mia-785263687-mmed.jpg" alt="Movie 2">
-  <h3>My Fault (2023)</h3>
-  <a href="My.Fault.2023.html">Watch and download</a>
-</div>
-
-<div class="card">
-  <img src="talk-to-me-2022-movie.jpg" alt="Movie 2">
-  <h3>Talk to Me (2022)</h3>
-  <a href="Talk.to.Me.2022.html">Watch and download</a>
-</div>
-
-<div class="card">
-  <img src="Ashampoo_Snap_2023.07.30_17h00m01s_001_.png" alt="Movie 2">
-  <h3>No Hard Feelings (2023)</h3>
-  <a href="No Hard Feelings 2023.html">Watch and download</a>
-</div>
-
-<div class="card">
-  <img src="Elevator-Game-scaled-367x550-1.jpg" alt="Movie 2">
-  <h3>Elevator Game (2023)</h3>
-  <a href="Elevator Game 2023.html">Watch and download</a>
-</div>
-
-<div class="card">
-  <img src="Cartel Five Feet Apart.jpg" alt="Movie 2">
-  <h3>Five feet apart (2019)</h3>
-  <a href="Five feet apart.html">Watch and download</a>
-</div>
-
-<div class="card">
-  <img src="Love_at_first_sight_2023.jpeg" alt="Movie 2">
-  <h3>love at first sight (2023)</h3>
-  <a href="love at first sight (2023).html">Watch and download</a>
-</div>
-
-<div class="card">
-  <img src="No-one-will-save-you-poster.jpg" alt="Movie 2">
-  <h3>No One Will Save You (2023)</h3>
-  <a href="No One Will Save You 2023 .html">Watch and download</a>
-</div>
-
-<div class="card">
-  <img src="Past_Lives_film_poster.png" alt="Movie 2">
-  <h3>past lives (2023)</h3>
-  <a href="past lives 2023.html">Watch and download</a>
-</div>
-
-<div class="card">
-  <img src="Nowhere_(2023_film)_poster.jpg" alt="Movie 2">
-  <h3>Nowhere (2023)</h3>
-  <a href="Nowhere (2023).html">Watch and download</a>
-</div>
-
-<div class="card">
-  <img src="The_Equalizer_3_poster.jpg" alt="Movie 2">
-  <h3>the equalizer 3 (2023)</h3>
-  <a href="the equalizer 3 (2023).html">Watch and download</a>
-</div>
-
-<div class="card">
-  <img src="Tomb_Raider_(2018_film).png" alt="Movie 2">
-  <h3>tomb raider (2018)</h3>
-  <a href="tomb raider (2018).html">Watch and download</a>
-</div>
-
-<div class="card">
-  <img src="Interstellar_film_poster.jpg" alt="Movie 2">
-  <h3>Interstellar (2014)</h3>
-  <a href="Interstellar (2014).html">Watch and download</a>
-</div>
-
-<div class="card">
-  <img src="five-nights-at-freddys-film-poster.avif" alt="Movie 2">
-  <h3>Five Nights at Freddy's (2023)</h3>
-  <a href="Five Nights at Freddy's (2023).html">Watch and download</a>
-</div>
-
-<div class="card">
-  <img src="The_Other_Zoey_poster.jpg" alt="Movie 2">
-  <h3>the other zoey (2023)</h3>
-  <a href="the other zoey (2023).html">Watch and download</a>
-</div>
-
-<div class="card">
-  <img src="MV5BZTA1MzcyMjctMGE2OS00YmEzLThlNzYtYWM2NmVmOTYyZjNjXkEyXkFqcGdeQXVyMTEzMTI1Mjk3._V1_FMjpg_UX1000_.jpg" alt="Movie 2">
-  <h3>overhaul (2023)</h3>
-  <a href="overhaul (2023).html">Watch and download</a>
-</div>
-
-
-<div id="movie-list"></div>
-    </main>
-    
-
-    <footer>
-        Follow me on:
-        Instagram: <a href="https://www.instagram.com/souy.king/">@souy.king</a>
-      YouTube: <a href="https://www.youtube.com/channel/UCt7cxBtOgjmJPO9SjqLCbMg">souyFN</a>
-    </footer>
-    
-
-    <script src="script.js"></script>
-  </body>
-
-  </html>
+</body>
+</html>
