@@ -31,432 +31,351 @@ atOptions = {
 document.write('<scr' + 'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/2cf220cc6cc00bc385b82eb8370ec367/invoke.js"></scr' + 'ipt>');
 </script>
 <div id="container-c8cc1aa60ad1f73fbe4a67d4e92a05be"></div>
-          </head>
-  <body>
-      <header>
-          <nav>
-              <div class="hamburger-menu">
-                  <div class="hamburger"></div>
-              </div>
-              <ul class="menu">
-                <li><a href="index.html"><img src="Web_logo.png" alt="Your Logo Alt Text" width="150" height="150"></a></li>
-                    <li><a href="movies.html">Movies</a></li>
-                  <li><a href="series.html">Series</a></li>
+    </head>
+<body>
+    <header>
+        <nav>
+            <div class="hamburger-menu">
+                <div class="hamburger"></div>
+            </div>
+            <ul class="menu">
+              <li><a href="index.html"><img src="Web_logo.png" alt="Your Logo Alt Text" width="150" height="150"></a></li>
+              <li><a href="movies.html">Movies</a></li>
+              <li><a href="series.html">Series</a></li>
 
-              </ul>
-              <div class="search">
-                  <form>
-                      <input type="text" placeholder="Search...">
-                      <button type="submit">Search</button>
-                  </form>
-              </div>  
-              <button id="logout-button">Log Out</button>
+            </ul>
+            <div class="search">
+                <form>
+                    <input type="text" placeholder="Search...">
+                    <button type="submit">Search</button>
+                </form>
+            </div>  
+        </nav>
 
-          </nav>
-
-          <!-- Place this code in the head section of your HTML document -->
+        <!-- Place this code in the head section of your HTML document -->
+<script>
+    // Check if the visitor has visited the site before
+    if (localStorage.getItem("visitorCount")) {
+      // If they have, increment the visitor count
+      var visitorCount = parseInt(localStorage.getItem("visitorCount"));
+      visitorCount += 1;
+      localStorage.setItem("visitorCount", visitorCount);
+    } else {
+      // If they haven't, set the visitor count to 1
+      localStorage.setItem("visitorCount", 1);
+    }
+  </script>
+  
+  <!-- Place this code where you want to display the visitor count -->
+  <div id="visitorCount"></div>
+  
   <script>
-      // Check if the visitor has visited the site before
-      if (localStorage.getItem("visitorCount")) {
-        // If they have, increment the visitor count
-        var visitorCount = parseInt(localStorage.getItem("visitorCount"));
-        visitorCount += 1;
-        localStorage.setItem("visitorCount", visitorCount);
-      } else {
-        // If they haven't, set the visitor count to 1
-        localStorage.setItem("visitorCount", 1);
-      }
-    </script>
-    
-    <!-- Place this code where you want to display the visitor count -->
-    <div id="visitorCount"></div>
-    
-    <script>
-      // Check if the current user is the owner of the site
-      if (document.cookie.indexOf("owner=true") > -1) {
-        // If they are, display the visitor count
-        document.getElementById("visitorCount").innerHTML = "Number of visitors: " + localStorage.getItem("visitorCount");
-      }
-    </script>
+    // Check if the current user is the owner of the site
+    if (document.cookie.indexOf("owner=true") > -1) {
+      // If they are, display the visitor count
+      document.getElementById("visitorCount").innerHTML = "Number of visitors: " + localStorage.getItem("visitorCount");
+    }
+  </script>
+  
+    </header>
 
-
-<script>
-  if (!localStorage.getItem('loggedIn')) {
-      // If the user is not logged in, redirect them to the login page.
-      window.location.href = 'login.html';
-  }
-</script>
-
-<script>
-  // Check if the user is logged in (you should have set this in your login process).
-  const isLoggedIn = localStorage.getItem('loggedIn');
-
-  if (isLoggedIn) {
-      // User is logged in, so show the logout button.
-      const logoutButton = document.getElementById('logout-button');
-
-      logoutButton.addEventListener('click', function () {
-          // Clear the login status from localStorage.
-          localStorage.removeItem('loggedIn');
-
-          // Redirect to the login page.
-          window.location.href = 'login.html';
-      });
-  } else {
-      // User is not logged in, so hide the logout button.
-      const logoutButton = document.getElementById('logout-button');
-      logoutButton.style.display = 'none';
-  }
-</script>
-    
-      </header>
-
-      <main>
-          <div class="card">
-              <img src="01e30e0b2ddfcc36d3841f59e7d11bb5.jpg" alt="Movie 2">
-              <h3>The Flash (2023)</h3>
-              <a href="the_flash_2023.html">Watch and download</a>
-          </div>
-          
-      
-      
-          <div class="card">
-              <img src="00e603272162f5af2b69c26f029b4109.jpg" alt="Movie 5">
-              <h3>Black Panther: Wakanda Forever (2022)</h3>
-              <a href="Black Panther.html">Watch and download</a>
-          </div>
-      
-          <div class="card">
-            <img src="32bad018fdef045e3262a4586be30343.jpg" alt="Movie 2">
-            <h3>Barbie (2023)</h3>
-            <a href="Barbie_2023.html">Watch and download</a>
-        </div>
-      
+    <main>
         <div class="card">
-          <img src="1642c5dd9272cbaa0f7b2f9fc7135a9f.jpg" alt="Movie 2">
-          <h3>Extraction 1</h3>
-          <a href="Extraction.html">Watch and download</a>
+            <img src="01e30e0b2ddfcc36d3841f59e7d11bb5.jpg" alt="Movie 2">
+            <h3>The Flash (2023)</h3>
+            <a href="the_flash_2023.html">Watch and download</a>
+        </div>
+        
+    
+    
+        <div class="card">
+            <img src="00e603272162f5af2b69c26f029b4109.jpg" alt="Movie 5">
+            <h3>Black Panther: Wakanda Forever (2022)</h3>
+            <a href="Black Panther.html">Watch and download</a>
+        </div>
+    
+        <div class="card">
+          <img src="32bad018fdef045e3262a4586be30343.jpg" alt="Movie 2">
+          <h3>Barbie (2023)</h3>
+          <a href="Barbie_2023.html">Watch and download</a>
       </div>
-
+    
       <div class="card">
-        <img src="extraction_two_xlg-203x300.jpg" alt="Movie 2">
-        <h3>Extraction 2</h3>
-        <a href="Extraction2.html">Watch and download</a>
+        <img src="1642c5dd9272cbaa0f7b2f9fc7135a9f.jpg" alt="Movie 2">
+        <h3>Extraction 1</h3>
+        <a href="Extraction.html">Watch and download</a>
     </div>
 
     <div class="card">
-      <img src="The-Other-Side-of-the-Door-2016.jpg" alt="Movie 2">
-      <h3>The.Other.Side.Of.The.Door.2016</h3>
-      <a href="The.Other.Side.Of.The.Door.2016.html">Watch and download</a>
+      <img src="extraction_two_xlg-203x300.jpg" alt="Movie 2">
+      <h3>Extraction 2</h3>
+      <a href="Extraction2.html">Watch and download</a>
   </div>
 
   <div class="card">
-    <img src="e93a315ba99620d1285596d49bf3f4c2.jpg" alt="Movie 2">
-    <h3>oppenheimer (2023)</h3>
-    <a href="oppenheimer.html">Watch and download</a>
-  </div>
+    <img src="The-Other-Side-of-the-Door-2016.jpg" alt="Movie 2">
+    <h3>The.Other.Side.Of.The.Door.2016</h3>
+    <a href="The.Other.Side.Of.The.Door.2016.html">Watch and download</a>
+</div>
 
-  <div class="card">
-    <img src="th.jpg" alt="Movie 2">
-    <h3>Meg 2: The Trench</h3>
-    <a href="the.meg2.html">Watch and download</a>
-  </div>
+<div class="card">
+  <img src="e93a315ba99620d1285596d49bf3f4c2.jpg" alt="Movie 2">
+  <h3>oppenheimer (2023)</h3>
+  <a href="oppenheimer.html">Watch and download</a>
+</div>
 
-  <div class="card">
-    <img src="film-aktorski-o-gran-turismo-zajmuje-4-miejsce-w-usa-podczas-weekendu-z-okazji-swieta-pracy.jpg" alt="Movie 2">
-    <h3>gran turismo (2023)</h3>
-    <a href="gran_turismo.html">Watch and download</a>
-  </div>
+<div class="card">
+  <img src="th.jpg" alt="Movie 2">
+  <h3>Meg 2: The Trench</h3>
+  <a href="the.meg2.html">Watch and download</a>
+</div>
 
-  <div class="card">
-    <img src="8QIAFlELWwP8xfo2Xwf7oleDcUE.jpg" alt="Movie 2">
-    <h3>Friday Night Plan (2023)</h3>
-    <a href="Friday_Night_Plan_2023.html">Watch and download</a>
-  </div>
+<div class="card">
+  <img src="film-aktorski-o-gran-turismo-zajmuje-4-miejsce-w-usa-podczas-weekendu-z-okazji-swieta-pracy.jpg" alt="Movie 2">
+  <h3>gran turismo (2023)</h3>
+  <a href="gran_turismo.html">Watch and download</a>
+</div>
 
-  <div class="card">
-    <img src="breaking_point.png" alt="Movie 2">
-    <h3>Breaking Point (2023)</h3>
-    <a href="Breaking_Point_2023.html">Watch and download</a>
-  </div>
+<div class="card">
+  <img src="8QIAFlELWwP8xfo2Xwf7oleDcUE.jpg" alt="Movie 2">
+  <h3>Friday Night Plan (2023)</h3>
+  <a href="Friday_Night_Plan_2023.html">Watch and download</a>
+</div>
 
-  <div class="card">
-    <img src="The-Fast-and-The-Furious-Tokyo-Drift-2006-375x520.jpg" alt="Movie 2">
-    <h3>Tokyo.Drift (2006)</h3>
-    <a href="tokyo_drift.html">Watch and download</a>
-  </div>
+<div class="card">
+  <img src="breaking_point.png" alt="Movie 2">
+  <h3>Breaking Point (2023)</h3>
+  <a href="Breaking_Point_2023.html">Watch and download</a>
+</div>
 
-  <div class="card">
-    <img src="Red-Sparrow-2018-375x520.jpg" alt="Movie 2">
-    <h3>Red Sparrow (2018)</h3>
-    <a href="Red.Sparrow.2018.html">Watch and download</a>
-  </div>
+<div class="card">
+  <img src="The-Fast-and-The-Furious-Tokyo-Drift-2006-375x520.jpg" alt="Movie 2">
+  <h3>Tokyo.Drift (2006)</h3>
+  <a href="tokyo_drift.html">Watch and download</a>
+</div>
 
-  <div class="card">
-    <img src="spider_man_across_the_spider_verse-257260163-mmed.jpg" alt="Movie 2">
-    <h3>spiderman across the spider verse (2023)</h3>
-    <a href="spider.man.across.the.spider.verse.html">Watch and download</a>
-  </div>
+<div class="card">
+  <img src="Red-Sparrow-2018-375x520.jpg" alt="Movie 2">
+  <h3>Red Sparrow (2018)</h3>
+  <a href="Red.Sparrow.2018.html">Watch and download</a>
+</div>
 
-  <div class="card">
-    <img src="red-notice-poster-400x592.jpg" alt="Movie 2">
-    <h3>red notice (2021)</h3>
-    <a href="red.notice.2021.html">Watch and download</a>
-  </div>
+<div class="card">
+  <img src="spider_man_across_the_spider_verse-257260163-mmed.jpg" alt="Movie 2">
+  <h3>spiderman across the spider verse (2023)</h3>
+  <a href="spider.man.across.the.spider.verse.html">Watch and download</a>
+</div>
 
-  <div class="card">
-    <img src="MV5BYzZkOGUwMzMtMTgyNS00YjFlLTg5NzYtZTE3Y2E5YTA5NWIyXkEyXkFqcGdeQXVyMjkwOTAyMDU@-351x520.jpg" alt="Movie 2">
-    <h3>Black Adam (2022)</h3>
-    <a href="Black.Adam.2022.html">Watch and download</a>
-  </div>
+<div class="card">
+  <img src="red-notice-poster-400x592.jpg" alt="Movie 2">
+  <h3>red notice (2021)</h3>
+  <a href="red.notice.2021.html">Watch and download</a>
+</div>
 
-  <div class="card">
-    <img src="title_poster_1687892324.jpg" alt="Movie 2">
-    <h3>Fear the Night (2023)</h3>
-    <a href="Fear.the.Night.2023.html">Watch and download</a>
-  </div>
+<div class="card">
+  <img src="MV5BYzZkOGUwMzMtMTgyNS00YjFlLTg5NzYtZTE3Y2E5YTA5NWIyXkEyXkFqcGdeQXVyMjkwOTAyMDU@-351x520.jpg" alt="Movie 2">
+  <h3>Black Adam (2022)</h3>
+  <a href="Black.Adam.2022.html">Watch and download</a>
+</div>
 
-  <div class="card">
-    <img src="cqFLQcDMfintFiDEyyw6XsUbbw4.jpg" alt="Movie 2">
-    <h3>The Nun (2018)</h3>
-    <a href="The.Nun.html">Watch and download</a>
-  </div>
+<div class="card">
+  <img src="title_poster_1687892324.jpg" alt="Movie 2">
+  <h3>Fear the Night (2023)</h3>
+  <a href="Fear.the.Night.2023.html">Watch and download</a>
+</div>
 
-  <div class="card">
-    <img src="th2.jpeg" alt="Movie 2">
-    <h3>The Nun (2023)</h3>
-    <a href="the.nun2.html">Watch and download</a>
-  </div>
+<div class="card">
+  <img src="cqFLQcDMfintFiDEyyw6XsUbbw4.jpg" alt="Movie 2">
+  <h3>The Nun (2018)</h3>
+  <a href="The.Nun.html">Watch and download</a>
+</div>
 
-  <div class="card">
-    <img src="1.jpeg" alt="Movie 2">
-    <h3>enola holmes 1 (2020)</h3>
-    <a href="enola.holmes.2020.html">Watch and download</a>
-  </div>
+<div class="card">
+  <img src="th2.jpeg" alt="Movie 2">
+  <h3>The Nun (2023)</h3>
+  <a href="the.nun2.html">Watch and download</a>
+</div>
 
-  <div class="card">
-    <img src="Enola+Holmes+2.jpg" alt="Movie 2">
-    <h3>enola holmes 2 (2022)</h3>
-    <a href="enola.holmes.2022.html">Watch and download</a>
-  </div>
+<div class="card">
+  <img src="1.jpeg" alt="Movie 2">
+  <h3>enola holmes 1 (2020)</h3>
+  <a href="enola.holmes.2020.html">Watch and download</a>
+</div>
 
-  <div class="card">
-    <img src="d7YxLE6ohg7TnDLYr6DEvyAxnC8.jpg" alt="Movie 2">
-    <h3>John Wick 1 (2014)</h3>
-    <a href="John-Wick-2014.html">Watch and download</a>
-  </div>
+<div class="card">
+  <img src="Enola+Holmes+2.jpg" alt="Movie 2">
+  <h3>enola holmes 2 (2022)</h3>
+  <a href="enola.holmes.2022.html">Watch and download</a>
+</div>
 
-  <div class="card">
-    <img src="r687UV1zQ5KDB9AxRokRscWIRvt.jpg" alt="Movie 2">
-    <h3>John Wick 2 (2017)</h3>
-    <a href="john-wick2.html">Watch and download</a>
-  </div>
+<div class="card">
+  <img src="d7YxLE6ohg7TnDLYr6DEvyAxnC8.jpg" alt="Movie 2">
+  <h3>John Wick 1 (2014)</h3>
+  <a href="John-Wick-2014.html">Watch and download</a>
+</div>
 
-  <div class="card">
-    <img src="John_Wick_Chapter_3_Parabellum.png" alt="Movie 2">
-    <h3>John Wick 3 (2019)</h3>
-    <a href="john-wick-3.html">Watch and download</a>
-  </div>
+<div class="card">
+  <img src="r687UV1zQ5KDB9AxRokRscWIRvt.jpg" alt="Movie 2">
+  <h3>John Wick 2 (2017)</h3>
+  <a href="john-wick2.html">Watch and download</a>
+</div>
 
-  <div class="card">
-    <img src="John_Wick_-_Chapter_4_promotional_poster.jpg" alt="Movie 2">
-    <h3>John Wick 4 (2023)</h3>
-    <a href="john-wick-4.html">Watch and download</a>
-  </div>
+<div class="card">
+  <img src="John_Wick_Chapter_3_Parabellum.png" alt="Movie 2">
+  <h3>John Wick 3 (2019)</h3>
+  <a href="John-Wick-2014.html">Watch and download</a>
+</div>
 
-  <div class="card">
-    <img src="culpa_mia-785263687-mmed.jpg" alt="Movie 2">
-    <h3>My Fault (2023)</h3>
-    <a href="My.Fault.2023.html">Watch and download</a>
-  </div>
+<div class="card">
+  <img src="John_Wick_-_Chapter_4_promotional_poster.jpg" alt="Movie 2">
+  <h3>John Wick 4 (2023)</h3>
+  <a href="john-wick2.html">Watch and download</a>
+</div>
 
-  <div class="card">
-    <img src="talk-to-me-2022-movie.jpg" alt="Movie 2">
-    <h3>Talk to Me (2022)</h3>
-    <a href="Talk.to.Me.2022.html">Watch and download</a>
-  </div>
+<div class="card">
+  <img src="culpa_mia-785263687-mmed.jpg" alt="Movie 2">
+  <h3>My Fault (2023)</h3>
+  <a href="My.Fault.2023.html">Watch and download</a>
+</div>
 
-  <div class="card">
-    <img src="Ashampoo_Snap_2023.07.30_17h00m01s_001_.png" alt="Movie 2">
-    <h3>No Hard Feelings (2023)</h3>
-    <a href="No Hard Feelings 2023.html">Watch and download</a>
-  </div>
+<div class="card">
+  <img src="talk-to-me-2022-movie.jpg" alt="Movie 2">
+  <h3>Talk to Me (2022)</h3>
+  <a href="Talk.to.Me.2022.html">Watch and download</a>
+</div>
 
-  <div class="card">
-    <img src="Elevator-Game-scaled-367x550-1.jpg" alt="Movie 2">
-    <h3>Elevator Game (2023)</h3>
-    <a href="Elevator Game 2023.html">Watch and download</a>
-  </div>
+<div class="card">
+  <img src="Ashampoo_Snap_2023.07.30_17h00m01s_001_.png" alt="Movie 2">
+  <h3>No Hard Feelings (2023)</h3>
+  <a href="No Hard Feelings 2023.html">Watch and download</a>
+</div>
 
-  <div class="card">
-    <img src="Cartel Five Feet Apart.jpg" alt="Movie 2">
-    <h3>Five feet apart (2019)</h3>
-    <a href="Five feet apart.html">Watch and download</a>
-  </div>
+<div class="card">
+  <img src="Elevator-Game-scaled-367x550-1.jpg" alt="Movie 2">
+  <h3>Elevator Game (2023)</h3>
+  <a href="Elevator Game 2023.html">Watch and download</a>
+</div>
 
-  <div class="card">
-    <img src="Love_at_first_sight_2023.jpeg" alt="Movie 2">
-    <h3>love at first sight (2023)</h3>
-    <a href="love at first sight (2023).html">Watch and download</a>
-  </div>
+<div class="card">
+  <img src="Cartel Five Feet Apart.jpg" alt="Movie 2">
+  <h3>Five feet apart (2019)</h3>
+  <a href="Five feet apart.html">Watch and download</a>
+</div>
 
-  <div class="card">
-    <img src="No-one-will-save-you-poster.jpg" alt="Movie 2">
-    <h3>No One Will Save You (2023)</h3>
-    <a href="No One Will Save You 2023 .html">Watch and download</a>
-  </div>
+<div class="card">
+  <img src="Love_at_first_sight_2023.jpeg" alt="Movie 2">
+  <h3>love at first sight (2023)</h3>
+  <a href="love at first sight (2023).html">Watch and download</a>
+</div>
 
-  <div class="card">
-    <img src="Past_Lives_film_poster.png" alt="Movie 2">
-    <h3>past lives (2023)</h3>
-    <a href="past lives 2023.html">Watch and download</a>
-  </div>
+<div class="card">
+  <img src="No-one-will-save-you-poster.jpg" alt="Movie 2">
+  <h3>No One Will Save You (2023)</h3>
+  <a href="No One Will Save You 2023 .html">Watch and download</a>
+</div>
 
-  <div class="card">
-    <img src="Nowhere_(2023_film)_poster.jpg" alt="Movie 2">
-    <h3>Nowhere (2023)</h3>
-    <a href="Nowhere (2023).html">Watch and download</a>
-  </div>
+<div class="card">
+  <img src="Past_Lives_film_poster.png" alt="Movie 2">
+  <h3>past lives (2023)</h3>
+  <a href="past lives 2023.html">Watch and download</a>
+</div>
 
-  <div class="card">
-    <img src="The_Equalizer_3_poster.jpg" alt="Movie 2">
-    <h3>the equalizer 3 (2023)</h3>
-    <a href="the equalizer 3 (2023).html">Watch and download</a>
-  </div>
+<div class="card">
+  <img src="Nowhere_(2023_film)_poster.jpg" alt="Movie 2">
+  <h3>Nowhere (2023)</h3>
+  <a href="Nowhere (2023).html">Watch and download</a>
+</div>
 
-  <div class="card">
-    <img src="Tomb_Raider_(2018_film).png" alt="Movie 2">
-    <h3>tomb raider (2018)</h3>
-    <a href="tomb raider (2018).html">Watch and download</a>
-  </div>
+<div class="card">
+  <img src="The_Equalizer_3_poster.jpg" alt="Movie 2">
+  <h3>the equalizer 3 (2023)</h3>
+  <a href="the equalizer 3 (2023).html">Watch and download</a>
+</div>
 
-  <div class="card">
-    <img src="Interstellar_film_poster.jpg" alt="Movie 2">
-    <h3>Interstellar (2014)</h3>
-    <a href="Interstellar (2014).html">Watch and download</a>
-  </div>
+<div class="card">
+  <img src="Tomb_Raider_(2018_film).png" alt="Movie 2">
+  <h3>tomb raider (2018)</h3>
+  <a href="tomb raider (2018).html">Watch and download</a>
+</div>
 
-  <div class="card">
-    <img src="five-nights-at-freddys-film-poster.avif" alt="Movie 2">
-    <h3>Five Nights at Freddy's (2023)</h3>
-    <a href="Five Nights at Freddy's (2023).html">Watch and download</a>
-  </div>
+<div class="card">
+  <img src="Interstellar_film_poster.jpg" alt="Movie 2">
+  <h3>Interstellar (2014)</h3>
+  <a href="Interstellar (2014).html">Watch and download</a>
+</div>
 
-  <div class="card">
-    <img src="The_Other_Zoey_poster.jpg" alt="Movie 2">
-    <h3>the other zoey (2023)</h3>
-    <a href="the other zoey (2023).html">Watch and download</a>
-  </div>
+<div class="card">
+  <img src="five-nights-at-freddys-film-poster.avif" alt="Movie 2">
+  <h3>Five Nights at Freddy's (2023)</h3>
+  <a href="Five Nights at Freddy's (2023).html">Watch and download</a>
+</div>
 
-  <div class="card">
-    <img src="MV5BZTA1MzcyMjctMGE2OS00YmEzLThlNzYtYWM2NmVmOTYyZjNjXkEyXkFqcGdeQXVyMTEzMTI1Mjk3._V1_FMjpg_UX1000_.jpg" alt="Movie 2">
-    <h3>overhaul (2023)</h3>
-    <a href="overhaul (2023).html">Watch and download</a>
-  </div>
+<div class="card">
+  <img src="The_Other_Zoey_poster.jpg" alt="Movie 2">
+  <h3>the other zoey (2023)</h3>
+  <a href="the other zoey (2023).html">Watch and download</a>
+</div>
 
-  <div class="card">
-    <img src="Totally_killer_poster.jpg" alt="Movie 2">
-    <h3>totally killer (2023)</h3>
-    <a href="totally killer (2023).html">Watch and download</a>
-  </div>
+<div class="card">
+  <img src="MV5BZTA1MzcyMjctMGE2OS00YmEzLThlNzYtYWM2NmVmOTYyZjNjXkEyXkFqcGdeQXVyMTEzMTI1Mjk3._V1_FMjpg_UX1000_.jpg" alt="Movie 2">
+  <h3>overhaul (2023)</h3>
+  <a href="overhaul (2023).html">Watch and download</a>
+</div>
 
-  <div class="card">
-    <img src="onesheet.jpg" alt="Movie 2">
-    <h3>saw x (2023)</h3>
-    <a href="saw x (2023).html">Watch and download</a>
-  </div>
+<div class="card">
+  <img src="Totally_killer_poster.jpg" alt="Movie 2">
+  <h3>totally killer (2023)</h3>
+  <a href="totally killer (2023).html">Watch and download</a>
+</div>
 
-  <div class="card">
-    <img src="Killers_of_the_Flower_Moon_film_poster.jpg" alt="Movie 2">
-    <h3>killers of the flower moo (2023)</h3>
-    <a href="killers of the flower moo (2023).html">Watch and download</a>
-  </div>
+<div class="card">
+  <img src="onesheet.jpg" alt="Movie 2">
+  <h3>saw x (2023)</h3>
+  <a href="saw x (2023).html">Watch and download</a>
+</div>
 
-  <div class="card">
-    <img src="Through_My_Window_film_poster.png" alt="Movie 2">
-    <h3>through my window across the sea (2023)</h3>
-    <a href="through my window across the sea (2023).html">Watch and download</a>
-  </div>
+<div class="card">
+  <img src="Killers_of_the_Flower_Moon_film_poster.jpg" alt="Movie 2">
+  <h3>killers of the flower moo (2023)</h3>
+  <a href="killers of the flower moo (2023).html">Watch and download</a>
+</div>
 
-  <div class="card">
-    <img src="JJ+E.jpg" alt="Movie 2">
-    <h3>JJ+E (2021)</h3>
-    <a href="JJ+E 2021.html">Watch and download</a>
-  </div>
+<div class="card">
+  <img src="Through_My_Window_film_poster.png" alt="Movie 2">
+  <h3>through my window across the sea (2023)</h3>
+  <a href="through my window across the sea (2023).html">Watch and download</a>
+</div>
 
-  <div class="card">
-    <img src="Infinite_(2021_film)_release_poster.jpeg" alt="Movie 2">
-    <h3>infinite (2021)</h3>
-    <a href="infinite (2021).html">Watch and download</a>
-  </div>
+<div class="card">
+  <img src="JJ+E.jpg" alt="Movie 2">
+  <h3>JJ+E (2021)</h3>
+  <a href="JJ+E 2021.html">Watch and download</a>
+</div>
 
-  <div class="card">
-    <img src="The_Killer_2023_poster.jpg" alt="Movie 2">
-    <h3>the killer (2023)</h3>
-    <a href="the killer (2023).html">Watch and download</a>
-  </div>
+<div class="card">
+  <img src="Infinite_(2021_film)_release_poster.jpeg" alt="Movie 2">
+  <h3>infinite (2021)</h3>
+  <a href="infinite (2021).html">Watch and download</a>
+</div>
 
+<div class="card">
+  <img src="The_Killer_2023_poster.jpg" alt="Movie 2">
+  <h3>the killer (2023)</h3>
+  <a href="the killer (2023).html">Watch and download</a>
+</div>
 
-  <div class="card">
-      <img src="AAAAQRah4oVEhJ_b_UHuJyNf__kfuHeSEW5Q44x7K9PEagzDab5Ojux1n0iC4UBOEzOnJrMj3wzPkpKiC5jDoByXfHzqp9qnriRQbgOKQzM6KT4-brpMZFrPt-NCYCcCppctIS8oS7JQd4CGNvEZG_5_-OJq.jpg" alt="Series Image">
-      <h3>One Piece (2023)</h3>
-      <a href="One.Piece.html">Watch series</a>
-  </div>
+<div id="movie-list"></div>
+    </main>
+    
 
-  <div class="card">
-    <img src="MV5BZGUzYTI3M2EtZmM0Yy00NGUyLWI4ODEtN2Q3ZGJlYzhhZjU3XkEyXkFqcGdeQXVyNTM0OTY1OQ@@._V1_FMjpg_UX1000_-.jpg_UY1200-.jpg" alt="Series Image">
-    <h3>the last of us (2023)</h3>
-    <a href="the.last.of.us.html">Watch series</a>
-  </div>
+    <footer>
+        Follow me on:
+        Instagram: <a href="https://www.instagram.com/souy.king/">@souy.king</a>
+      YouTube: <a href="https://www.youtube.com/channel/UCt7cxBtOgjmJPO9SjqLCbMg">souyFN</a>
+    </footer>
+    
 
-  <div class="card">
-    <img src="1899NetflixPosterEnglish.jpg" alt="Series Image">
-    <h3>1899 (2023)</h3>
-    <a href="1899.html">Watch series</a>
-  </div>
+    <script src="script.js"></script>
+  </body>
 
-  <div class="card">
-    <img src="tM6xqRKXoloH9UchaJEyyRE9O1w.jpg" alt="Series Image">
-    <h3>The Punisher (2017)</h3>
-    <a href="The.Punisher.html">Watch series</a>
-  </div>
-
-  <div class="card">
-    <img src="punisher_s2_vertical-billy-digital_only_rgb.jpg" alt="Series Image">
-    <h3>The Punisher 2 (2019)</h3>
-    <a href="The.Punisher2.html">Watch series</a>
-  </div>
-
-  <div class="card">
-    <img src="BreakingBadS1DVD.jpg" alt="Series Image">
-    <h3>Breaking Bad (s1)</h3>
-    <a href="Breaking Bad.s1.html">Watch series</a>
-  </div>
-
-    <div class="card">
-      <img src="BreakingBadS2DVD.jpg" alt="Series Image">
-      <h3>Breaking Bad (s2)</h3>
-      <a href="Breaking Bad.s2.html">Watch series</a>
-    </div>
-
-    <div class="card">
-      <img src="Breaking_Bad_season_3_DVD.png" alt="Series Image">
-      <h3>Breaking Bad (s3)</h3>
-      <a href="Breaking Bad.s3.html">Watch series</a>
-    </div>
-
-  <div id="movie-list"></div>
-      </main>
-      
-
-      <footer>
-          Follow me on:
-          Instagram: <a href="https://www.instagram.com/souy.king/">@souy.king</a>
-        YouTube: <a href="https://www.youtube.com/channel/UCt7cxBtOgjmJPO9SjqLCbMg">souyFN</a>
-      </footer>
-      
-
-      <script src="script.js"></script>
-    </body>
-
-    </html>
+  </html>
