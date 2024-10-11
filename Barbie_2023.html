@@ -95,68 +95,68 @@
         video {
             width: 100%;
         }
+
         /* Add this CSS for menu items */
-.menu li {
-  margin-left: 20px;
-  display: flex;
-  align-items: center;
-}
+        .menu li {
+            margin-left: 20px;
+            display: flex;
+            align-items: center;
+        }
 
-.menu li a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: bold;
-  letter-spacing: 1px;
-  transition: all 0.3s ease;
-  margin-left: 5px; /* Add some spacing between menu items */
-}
+        .menu li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            margin-left: 5px; /* Add some spacing between menu items */
+        }
 
-/* Adjust the logo styling */
-.logo {
-  width: 150px; /* Set the desired width for the logo */
-}
+        /* Adjust the logo styling */
+        .logo {
+            width: 150px; /* Set the desired width for the logo */
+        }
 
-.logo img {
-  max-width: 100%;
-  height: auto;
-}
+        .logo img {
+            max-width: 100%;
+            height: auto;
+        }
 
-/* Add this CSS for the search bar */
-.search {
-  margin-left: auto;
-  display: flex;
-  align-items: center;
-}
+        /* Add this CSS for the search bar */
+        .search {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+        }
 
-.search input[type="text"] {
-  padding: 10px;
-  border-radius: 20px;
-  border: none;
-  margin-right: 5px; /* Add some spacing between the search bar and menu items */
-}
+        .search input[type="text"] {
+            padding: 10px;
+            border-radius: 20px;
+            border: none;
+            margin-right: 5px; /* Add some spacing between the search bar and menu items */
+        }
 
-/* Add this CSS to style the search button */
-.search button {
-  background-color: #f1c40f;
-  color: black;
-  padding: 10px;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin-right: 5px; /* Add some spacing between the search bar and menu items */
-}
+        /* Add this CSS to style the search button */
+        .search button {
+            background-color: #f1c40f;
+            color: black;
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-right: 5px; /* Add some spacing between the search bar and menu items */
+        }
 
-/* Add this CSS to style the "Movies" and "Series" links */
-.menu li:nth-child(2),
-.menu li:nth-child(3) {
-  margin-left: 20px;
-}
-
-/* Optionally, you can adjust the spacing and alignment as needed */
+        /* Add this CSS to style the "Movies" and "Series" links */
+        .menu li:nth-child(2),
+        .menu li:nth-child(3) {
+            margin-left: 20px;
+        }
 
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script> <!-- Add HLS.js library -->
 </head>
 <body>
     <header>
@@ -181,8 +181,29 @@
     <div class="movie-container">
         <h1>Barbie (2023)</h1>
         <div class="video-player">
-            <video src="https://souy17.s3.eu-north-1.amazonaws.com/%5Barabseed%5D.Barbie.2023.HC.720p.WEB-DL.mp4" controls></video>
+            <!-- Video player modified to support HLS -->
+            <video id="video" controls></video> <!-- Removed src attribute -->
         </div> 
     </div>
+
+    <script>
+        var video = document.getElementById('video');
+        var videoSrc = 'https://r465--7umzmh0e.c.scdns.io/stream/v1/hls/M1P2pCPh5Gll7NA71en96A/1728657758/web184.faselhd.cafe/all/178.130.53.46/no/EG/0/07-02/3/500a652fc70b854e586d3bed342c3a55/155_hd720b_playlist.m3u8';
+
+        if (Hls.isSupported()) {
+            var hls = new Hls();
+            hls.loadSource(videoSrc);
+            hls.attachMedia(video);
+            hls.on(Hls.Events.MANIFEST_PARSED, function() {
+                video.play();
+            });
+        } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+            // For Safari and other browsers with native HLS support
+            video.src = videoSrc;
+            video.addEventListener('loadedmetadata', function() {
+                video.play();
+            });
+        }
+    </script>
 </body>
 </html>
